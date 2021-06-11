@@ -13,6 +13,7 @@ export function AuthProvider({ children }) {
 
 	function signup(email, password) {
 		return auth.createUserWithEmailAndPassword(email, password)
+		//auth.createUserWithGoogleProvider(provider)
 	}
 
 	function login(email, password) {
