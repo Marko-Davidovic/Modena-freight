@@ -2,8 +2,8 @@ import React from "react"
 import ReactDOM from "react-dom"
 import App from "./components/App"
 import "bootstrap/dist/css/bootstrap.min.css"
-import { StateProvider } from "./components/StateProvider"
-import reducer, { initialState } from "./components/reducer"
+import { StateProvider } from "./contexts/StateProvider"
+import reducer, { initialState } from "./contexts/reducer"
 
 
 ReactDOM.render(
