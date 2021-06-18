@@ -1,5 +1,5 @@
 import React from 'react'
-import { Children } from 'react'
+import { children } from 'react'
 import { Container } from "react-bootstrap"
 
 export default function CenterContainer({ children }) {

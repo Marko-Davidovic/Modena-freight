@@ -32,7 +32,8 @@ export default function Login() {
 
 		setLoading(false)
 	}
-	const googleSinIn = () => {
+	// error /not recornize user sometimes
+	const googleSingIn = () => {
 		auth.signInWithPopup(provider)
 			.then((result) => {
 				dispatch({
@@ -42,8 +43,7 @@ export default function Login() {
 
 				history.push("/dashboard");
 			})
-			.catch((error) => (error.message));
-
+			.catch((error) => (error.message))
 	}
 
 	return (
@@ -65,7 +65,7 @@ export default function Login() {
 							<Button disabled={loading} className="w-100 mt-3" type="submit">
 								Log In
 							</Button>
-							<Button disabled={loading} className="w-100 mt-3" type="submit" onClick={googleSinIn}>
+							<Button disabled={loading} className="w-100 mt-3" type="submit" onClick={googleSingIn}>
 								Log In with Google
 							</Button>
 						</Form>

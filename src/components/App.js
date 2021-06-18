@@ -19,13 +19,15 @@ import Recruting from "./dashboard/sidebar/Recruting"
 
 
 
-function App(props) {
+function App() {
 	const [{ user }, dispatch] = UseStateValue();
 	return (
+
 		<Router>
 			<AuthProvider>
 				<Switch>
-					{/*<Drawer />*/}
+					{/*<Dashboard />*/}
+					<PrivateRoute exact path="/" component={Dashboard} />
 					<PrivateRoute exact path="/dashboard" component={Dashboard} />
 					<PrivateRoute exact path="/dashboard/accounting" component={Accounting} />
 					<PrivateRoute exact path="/dashboard/office" component={Office} />
