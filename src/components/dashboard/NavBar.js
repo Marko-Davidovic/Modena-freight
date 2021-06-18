@@ -14,6 +14,7 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
+import { Link } from 'react-router-dom'; // maybe not link .. somthing else
 
 const useStyles = makeStyles((theme) => ({
 	grow: {
@@ -157,7 +158,7 @@ export default function PrimarySearchAppBar() {
 				>
 					<AccountCircle />
 				</IconButton>
-				<p>Profile</p>
+				<Link to="/user">Profile</Link>
 			</MenuItem>
 		</Menu>
 	);
@@ -177,7 +178,7 @@ export default function PrimarySearchAppBar() {
 					</IconButton>
 					<Typography className={classes.title} variant="h6" noWrap>
 						Modena Freight
-          </Typography>
+					</Typography>
 					<div className={classes.search}>
 						<div className={classes.searchIcon}>
 							<SearchIcon />

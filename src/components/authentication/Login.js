@@ -24,7 +24,7 @@ export default function Login() {
 		try {
 			setError("")
 			setLoading(true)
-			await login(emailRef.current.value, passwordRef.current.value) // error
+			await login(emailRef.current.value, passwordRef.current.value)
 			history.push("/dashboard")
 		} catch {
 			setError("Failed to log in")
@@ -64,10 +64,10 @@ export default function Login() {
 							</Form.Group>
 							<Button disabled={loading} className="w-100 mt-3" type="submit">
 								Log In
-           					 </Button>
+							</Button>
 							<Button disabled={loading} className="w-100 mt-3" type="submit" onClick={googleSinIn}>
 								Log In with Google
-            				 </Button>
+							</Button>
 						</Form>
 						<div className="w-100 text-center mt-3">
 							<Link to="/forgot-password">Forgot Password?</Link>

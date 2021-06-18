@@ -25,7 +25,7 @@ export default function Signup() {
 			setError("")
 			setLoading(true)
 			await signup(emailRef.current.value, passwordRef.current.value)
-			history.push("/")
+			history.push("/login")
 		} catch {
 			setError("Failed to create an account")
 		}
@@ -55,7 +55,7 @@ export default function Signup() {
 							</Form.Group>
 							<Button disabled={loading} className="w-100" type="submit">
 								Sign Up
-            				</Button>
+							</Button>
 						</Form>
 					</Card.Body>
 				</Card>
